@@ -29,9 +29,7 @@ public class DashboardImpl implements Dashboard {
     }
 
     @Override
-    public int addPalindromePhrase(String name, String phrase, Boolean palindromeExists) {
-        if (palindromeExists) return nameAndPoints.get(name);
-
+    public int addPalindromePhrase(String name, String phrase) {
         nameAndPhrases.get(name).add(phrase);
         nameAndPoints.replace(name, nameAndPoints.get(name) + scoring.scorePoints(phrase));
         return nameAndPoints.get(name);

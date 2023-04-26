@@ -33,8 +33,11 @@ public class Main {
 
                 if (palindrome) {
                     boolean existingPalindrome = dashboard.checkExistencePalindromePhrase(name, phrase);
-                    if (existingPalindrome) System.out.println("Данный палиндромом был введен вами ранее");
-                    int score = dashboard.addPalindromePhrase(name, phrase, existingPalindrome);
+                    if (existingPalindrome) {
+                        System.out.println("Данный палиндромом был введен вами ранее");
+                        continue;
+                    }
+                    int score = dashboard.addPalindromePhrase(name, phrase);
                     System.out.println("Общее количество ваших очков: " + score);
                 } else System.out.println("Введенная фраза не является палиндромом");
 

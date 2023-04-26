@@ -21,10 +21,9 @@ public interface Dashboard {
      *
      * @param name Имя пользователя
      * @param phrase Слово/фраза-палиндром
-     * @param palindromeExists Существует ли палиндром у пользователя
      * @return Общее количество очков пользователя
      */
-    int addPalindromePhrase(String name, String phrase, Boolean palindromeExists);
+    int addPalindromePhrase(String name, String phrase);
 
     /**
      * Показ доски лидеров
